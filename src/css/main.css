@@ -1,5 +1,9 @@
 form.form-example {
-  display: table;
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  align-items: end;
+  padding-left: 100px;
 }
 
 div.form-example {
