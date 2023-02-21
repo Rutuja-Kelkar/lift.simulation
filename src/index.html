@@ -1,43 +1,30 @@
 <!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
 
-<div style="display: flex; flex-wrap: wrap; gap: 50px">
-  <h2>Number of Floors</h2>
-  <div style="padding-top: 25px">
-    <input
-      id="floor"
-      style="border: 2px dotted rgb(96, 139, 168); width: 250px; height: 30px"
-    />
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
   </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 50px">
-  <h2>Number of Lifts</h2>
-  <div style="padding-top: 25px">
-    <input
-      style="border: 2px dotted rgb(96, 139, 168); width: 250px; height: 30px"
-    />
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
   </div>
-</div>
-<div style="padding-top: 25px">
-  <button type="button" onclick="window.location.href = './page.html';">
-    Go Play!
-  </button>
-</div>
-<div style="padding-top: 25px">
-  <button type="button" onclick="setDiv()">Go Print!</button>
-</div>
-
-<div id="printDiv"></div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
 
 <script>
   function setFloor() {
     var floor = document.getElementById("floor").value;
     localStorage.setItem("floor", floor);
-    // localStorage.setItem("floor", floor);
   }
 
   function setDiv() {
     var floor = document.getElementById("floor").value;
     document.getElementById("printDiv").innerHTML = floor;
-    // document.getElementById("floor").value = localStorage.name;
   }
 </script>
