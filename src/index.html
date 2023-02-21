@@ -4,6 +4,7 @@
   <h2>Number of Floors</h2>
   <div style="padding-top: 25px">
     <input
+      id="floor"
       style="border: 2px dotted rgb(96, 139, 168); width: 250px; height: 30px"
     />
   </div>
@@ -17,5 +18,26 @@
   </div>
 </div>
 <div style="padding-top: 25px">
-  <button type="button">Go Play!</button>
+  <button type="button" onclick="window.location.href = './page.html';">
+    Go Play!
+  </button>
 </div>
+<div style="padding-top: 25px">
+  <button type="button" onclick="setDiv()">Go Print!</button>
+</div>
+
+<div id="printDiv"></div>
+
+<script>
+  function setFloor() {
+    var floor = document.getElementById("floor").value;
+    localStorage.setItem("floor", floor);
+    // localStorage.setItem("floor", floor);
+  }
+
+  function setDiv() {
+    var floor = document.getElementById("floor").value;
+    document.getElementById("printDiv").innerHTML = floor;
+    // document.getElementById("floor").value = localStorage.name;
+  }
+</script>
