@@ -1,6 +1,12 @@
 <!DOCTYPE html>
+<body onload="setData()">
+  <p id="show">Floors</p>
 
-<script>
-  var r = window.location.search;
-  alert(r);
-</script>
+  <script>
+    function setData() {
+      if (typeof localStorage != "undefined") {
+        document.getElementById("show").innerHTML = localStorage.floor;
+      }
+    }
+  </script>
+</body>
