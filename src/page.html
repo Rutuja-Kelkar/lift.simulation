@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<body onload="setData()">
-  <p id="show">Floors</p>
+<title>Let's Go!</title>
+<body onload="recieveData()">
+  <p id="showfloor">Floors</p>
+  <p id="showlift">Floors</p>
 
   <script>
-    function setData() {
+    function recieveData() {
       if (typeof localStorage != "undefined") {
-        document.getElementById("show").innerHTML = localStorage.floor;
+        document.getElementById("showfloor").innerHTML = localStorage.floor;
+      }
+      if (typeof localStorage != "undefined") {
+        document.getElementById("showlift").innerHTML = localStorage.floor;
       }
     }
   </script>

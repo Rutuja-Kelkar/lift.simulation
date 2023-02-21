@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" href="./css/main.css" />
 </head>
+<title>Lift Simulation</title>
 
 <form id="form" action="page.html" method="get" class="form-example">
   <div class="form-example">
@@ -21,6 +22,9 @@
   function submitForm() {
     if (typeof localStorage != "undefined") {
       localStorage.floor = document.getElementById("floor").value;
+    }
+    if (typeof localStorage != "undefined") {
+      localStorage.lift = document.getElementById("lift").value;
     }
     document.getElementById("form").submit();
   }
