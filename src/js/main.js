@@ -5,14 +5,19 @@ lift.style.padding = "4px";
 lift.style.height = "100px";
 lift.style.width = "100px";
 lift.style.position = "absolute";
-lift.style.top = "500px";
+lift.style.top = "200px";
 lift.style.left = "100px";
 
 lift.setAttribute("id", "liftObject");
 
-function colorLift() {
+function moveLiftUp() {
   var lift = document.getElementById("liftObject");
-  lift.style.backgroundColor = "green";
+  lift.style.top = lift.offsetTop + 10 + "px";
+}
+
+function moveLiftDown() {
+  var lift = document.getElementById("liftObject");
+  lift.style.top = lift.offsetTop - 10 + "px";
 }
 
 document.body.appendChild(lift);

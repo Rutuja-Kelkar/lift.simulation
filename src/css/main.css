@@ -16,6 +16,14 @@ input {
   margin-bottom: 10px;
 }
 
+div.control-button {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  padding-left: 100px;
+  padding-top: 25px;
+}
+
 label {
   padding-right: 10px;
 }

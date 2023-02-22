@@ -14,14 +14,28 @@
       <input type="text" name="lift" id="lift" required />
     </div>
     <div class="form-example">
+      <input id="clickButton" type="button" value="Submit" />
+    </div>
+  </form>
+  <div class="control-button">
+    <div>
       <input
         id="clickButton"
         type="button"
-        value="Submit"
-        onclick="colorLift()"
+        value="Lift Up"
+        onclick="moveLiftUp()"
       />
     </div>
-  </form>
+
+    <div>
+      <input
+        id="clickButton"
+        type="button"
+        value="Lift Down"
+        onclick="moveLiftDown()"
+      />
+    </div>
+  </div>
 </body>
 
 <script src="./js/main.js"></script>
