@@ -3,29 +3,25 @@
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 <title>Lift Simulation</title>
+<body>
+  <form id="form" action="" method="get" class="form-example">
+    <div class="form-example">
+      <label for="floor">Enter number of floors: </label>
+      <input type="text" name="floor" id="floor" required />
+    </div>
+    <div class="form-example">
+      <label for="lift">Enter number of lifts: </label>
+      <input type="text" name="lift" id="lift" required />
+    </div>
+    <div class="form-example">
+      <input
+        id="clickButton"
+        type="button"
+        value="Submit"
+        onclick="colorLift()"
+      />
+    </div>
+  </form>
+</body>
 
-<form id="form" action="" method="get" class="form-example">
-  <div class="form-example">
-    <label for="floor">Enter number of floors: </label>
-    <input type="text" name="floor" id="floor" required />
-  </div>
-  <div class="form-example">
-    <label for="lift">Enter number of lifts: </label>
-    <input type="text" name="lift" id="lift" required />
-  </div>
-  <div class="form-example">
-    <input type="button" value="Submit" onclick="submitForm()" />
-  </div>
-</form>
-
-<script>
-  function submitForm() {
-    if (typeof localStorage != "undefined") {
-      localStorage.floor = document.getElementById("floor").value;
-    }
-    if (typeof localStorage != "undefined") {
-      localStorage.lift = document.getElementById("lift").value;
-    }
-    document.getElementById("form").submit();
-  }
-</script>
+<script src="./js/main.js"></script>
